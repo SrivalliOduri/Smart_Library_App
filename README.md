@@ -1,2 +1,2 @@
-# Smart_Library_App
+# ScanLib
 RTP Project - Smart Academic Resource System
