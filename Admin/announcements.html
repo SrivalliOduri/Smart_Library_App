@@ -50,11 +50,34 @@ button{
 
 <div class="box">
 
-<textarea placeholder="Type announcement here..."></textarea>
+<textarea id="announcementText" placeholder="Type announcement here..."></textarea>
 
-<button>Post Announcement</button>
-
+<button type="button" onclick="postAnnouncement()">Post Announcement</button>
+<div id="announcementList"></div>
 </div>
+<script>
+function postAnnouncement() {
+    alert("button clicked");
+    var text = document.getElementById("announcementText").value;
+
+    if (text.trim() === "") {
+        alert("Please enter an announcement");
+        return;
+    }
+
+    var list = document.getElementById("announcementList");
+
+    var div = document.createElement("div");
+    div.innerText = text;
+    div.style.padding = "10px";
+    div.style.border = "1px solid #ccc";
+    div.style.marginTop = "8px";
+
+    list.appendChild(div);
+
+    document.getElementById("announcementText").value = "";
+}
+</script>
 
 </body>
 </html>
